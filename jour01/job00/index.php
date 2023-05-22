@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mon premier script PHP</title>
+    <title>job00</title>
 </head>
 <body>
     <?php
