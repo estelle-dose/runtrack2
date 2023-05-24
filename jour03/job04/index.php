@@ -6,10 +6,13 @@
 <body>
     <?php
         $str = "Dans l'espace, personne ne vous entend crier";
+        $characterCount = 0;
 
-        $nombreCaracteres = strlen($str);
+        for ($i = 0; isset($str[$i]); $i++) {
+            $characterCount++;
+        }
 
-        echo "Le nombre de caractères dans la chaîne est : " . $nombreCaracteres;
+        echo "Le nombre de caractères dans la chaîne est : " . $characterCount;
     ?>
 </body>
 </html>

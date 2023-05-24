@@ -7,37 +7,39 @@
     <?php
         $str = "On n'est pas le meilleur quand on le croit mais quand on le sait";
 
-        $dic = [
+        $dic = array(
             "consonnes" => 0,
             "voyelles" => 0
-        ];
+        );
 
-        $voyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
+        $vowels = "aeiouAEIOU";
 
-        $length = strlen($str);
-        for ($i = 0; $i < $length; $i++) {
-            $caractere = $str[$i];
-            if (in_array($caractere, $voyelles)) {
-                $dic["voyelles"]++;
-            } elseif (ctype_alpha($caractere)) {
-                $dic["consonnes"]++;
+        for ($i = 0; isset($str[$i]); $i++) {
+            $char = $str[$i];
+            
+            if (ctype_alpha($char)) {
+                if (strpos($vowels, $char) !== false) {
+                    $dic["voyelles"]++;
+                } else {
+                    $dic["consonnes"]++;
+                }
             }
         }
-    ?>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Voyelles</th>
-                <th>Consonnes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><?php echo $dic["voyelles"]; ?></td>
-                <td><?php echo $dic["consonnes"]; ?></td>
-            </tr>
-        </tbody>
-    </table>
+        echo "<table>
+                <thead>
+                    <tr>
+                        <th>Voyelles</th>
+                        <th>Consonnes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{$dic['voyelles']}</td>
+                        <td>{$dic['consonnes']}</td>
+                    </tr>
+                </tbody>
+            </table>";
+    ?>
 </body>
 </html>

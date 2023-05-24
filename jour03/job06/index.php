@@ -6,13 +6,13 @@
 <body>
     <?php
         $str = "Les choses que l'on possède finissent par nous posséder.";
+        $reversedString = "";
 
-        mb_internal_encoding('UTF-8');
-
-        $length = mb_strlen($str);
-        for ($i = $length - 1; $i >= 0; $i--) {
-            echo mb_substr($str, $i, 1);
+        for ($i = mb_strlen($str, 'UTF-8') - 1; $i >= 0; $i--) {
+            $reversedString .= mb_substr($str, $i, 1, 'UTF-8');
         }
+
+        echo $reversedString;
     ?>
 </body>
 </html>

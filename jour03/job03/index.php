@@ -6,16 +6,17 @@
 <body>
     <?php
         $str = "I'm sorry Dave I'm afraid I can't do that";
+        $vowels = "aeiouAEIOU";
+        $vowelString = "";
 
-        $voyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
-
-        $length = strlen($str);
-        for ($i = 0; $i < $length; $i++) {
-            $caractere = $str[$i];
-            if (in_array($caractere, $voyelles)) {
-                echo $caractere;
+        for ($i = 0; $i < strlen($str); $i++) {
+            $char = $str[$i];
+            if (strpos($vowels, $char) !== false) {
+                $vowelString .= $char;
             }
         }
+
+        echo $vowelString;
     ?>
 </body>
 </html>
