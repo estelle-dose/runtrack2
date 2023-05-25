@@ -4,12 +4,6 @@
     <title>job01</title>
 </head>
 <body>
-    <?php
-    $argumentsCount = count($_GET);
-
-    echo "Le nombre d'arguments GET envoyé est : $argumentsCount";
-    ?>
-
     <form method="GET">
         <label for="prenom">Prenom :</label>
         <input type="text" name="prenom" id="prenom"><br>
@@ -22,5 +16,11 @@
 
         <input type="submit" value="Envoyer">
     </form>
+
+    <?php
+        $argumentsCount = count($_GET);
+
+        echo "Le nombre d'arguments GET envoyé est : $argumentsCount";
+    ?>
 </body>
 </html>
