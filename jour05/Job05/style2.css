@@ -1,0 +1,55 @@
+body {
+    background-color: #95053f;
+    font-family: 'Luminari', sans-serif;
+
+  }
+  
+  h2 {
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  form {
+    background-color: #ff8dc2;
+    padding: 28px;
+    border: 26px solid #fe086a;
+    border-radius: 10px 100px / 120px;
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  label {
+    font-style: italic;
+    color: #fff;
+  }
+  
+  select {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px 100px / 120px;
+    font-family: 'Luminari', sans-serif;
+    background-color: #fff;
+    color: #fe086a;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #fe086a;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px 100px / 120px;
+    cursor: pointer;
+    font-family: 'Luminari', sans-serif;
+    font-style: italic;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #fe086a;
+  }
+  
