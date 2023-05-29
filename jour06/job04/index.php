@@ -32,8 +32,8 @@
             return $resultat;
         }
 
-        $res = calcule(5, '+', 3);  // Appel de la fonction avec les valeurs 5, '+', 3
-        echo $res;  // Affichage du résultat (8)
+        $res = calcule(10, '+', 9);  // Appel de la fonction avec les valeurs 10, '+', 9
+        echo $res;  // Affichage du résultat (19)
         
     ?>
 </body>
